@@ -3,6 +3,7 @@
 from IndexBuilder.builder import Builder
 from AIAssistant.assistant import Assistant
 import os
+import gradio as gr
 
 
 def main():
@@ -17,6 +18,12 @@ def main():
     assistant = Assistant(index)
     assistant.answer_queries()
 
+
+""" demo = gr.Interface(fn=main, inputs="text", outputs="text")
+demo.launch()
+ """
+
 if __name__ == "__main__":
     main()
+
 

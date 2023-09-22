@@ -1,6 +1,8 @@
 from llama_index import SimpleDirectoryReader, GPTSimpleVectorIndex, LLMPredictor, PromptHelper, ServiceContext
 from langchain import OpenAI
 
+#1 token is approximately 4 characters or 0.75 words for English text.
+
 class Builder:
     def __init__(self, directory_path):
         self.directory_path = directory_path
