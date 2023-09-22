@@ -1,5 +1,3 @@
-
-
 from IndexBuilder.builder import Builder
 from AIAssistant.assistant import Assistant
 import os
