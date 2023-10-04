@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Bot</title>
+    <title>Chatbot FJS</title>
     <link rel="stylesheet" href="static\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Chat Bot</h1>
+    <div id="copyright">
+        <p>&copy; Todos os direitos reservados: Acelera FJS</p>
+    </div>
+    <h1>Chatbot FJS</h1>
     <div class="chat-box">
         <div class="chat-log" id="chat-log"></div>
         <form id="user-input-form">
-            <input type="text" id="user-input" placeholder="Type your message...">
-            <button type="submit">Send</button>
+            <input type="text" id="user-input" name="user_input" placeholder="Digite aqui sua dúvida...">
+            <button type="submit" id="button-send">Enviar</button>
         </form>
     </div>
     <script src="static/script.js"></script>

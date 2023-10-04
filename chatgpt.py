@@ -41,8 +41,8 @@ def chatBotRun(query):
 
     chat_history = []
     while True:
-      #if not query:
-      #query = input("Prompt: ")
+      if not query:
+        query = input("Prompt: ")
 
       #Salva as últimas perguntas
       result = chain({"question": query, "chat_history": chat_history})

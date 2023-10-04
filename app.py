@@ -4,7 +4,6 @@ import os
 import sys
 import openai
 from flask_cors import CORS
-# ... import other necessary modules
 
 app = Flask(__name__)
 CORS(app)  
@@ -16,8 +15,9 @@ def index():
 @app.route('/ask', methods=['POST'])
 def ask():
     try:
+        print("teste 1")
         userInput = request.form['user_input']
-        print("manga")
+        print("teste")
         bot_response = chatBotRun(userInput)
         return jsonify({'response': bot_response})
     except Exception as e:

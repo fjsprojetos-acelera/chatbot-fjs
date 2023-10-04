@@ -1,16 +1,47 @@
 /* Estilização básica do chatbot */
+body {
+    font-size: 23px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: center;
+    background-color: #941950;
+}
+
+#button-send {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: 40%;
+    border: none;
+    border-radius: 10px;
+    background-color: #941950; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+#button-send:hover {
+    background-color: #ce216f; /* Cor de fundo quando em foco */
+}
+
+#button-send:focus {
+    outline: none; /* Remova a borda de foco padrão */
+}
+
+
 .chat-box {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
+    background-color: #0000006f;
+    border: 5px solid #ffffff;
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 1 1 5px rgba(0, 0, 0, 0.2);
+    max-width: 550px;
     margin: 0 auto;
 }
 
 .chat-log {
-    height: 300px;
+    height: 430px;
     overflow-y: scroll;
     padding: 10px;
     border: 1px solid #ddd;
@@ -18,13 +49,27 @@
     background-color: #fff;
 }
 
+.title-user::before {
+    content: "SUA PERGUNTA: ";
+}
+
+.title-bot::before {
+    content: "RESPOSTA: ";
+}
+
+.user-message, .bot-message {
+    /* ... outros estilos ... */
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
 .user-message {
-    background-color: #007bff;
+    background-color: #797979;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    max-width: 70%;
+    max-width: 100%;
     word-wrap: break-word;
 }
 
@@ -34,7 +79,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    max-width: 70%;
+    max-width: 100%;
     word-wrap: break-word;
 }
 
@@ -43,27 +88,35 @@
     margin-top: 10px;
 }
 
+/* Estilização do input */
 #user-input {
-    width: 70%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 #user-input::placeholder {
-    color: #999;
+    color: #999; /* Cor do texto de placeholder */
 }
 
-#user-input[type="text"] {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#user-input:focus {
+    background-color: #fff; /* Cor de fundo quando em foco */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra mais forte quando em foco */
 }
 
-#user-input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
+#copyright {
+    position: absolute; /* Define a posição absoluta */
+    top: 0; /* Alinha no topo da página */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Alinhar ao centro */
+    padding: 5px; /* Espaçamento interno */
+    width: 98%; /* Largura total */
+    font-size: 10px; /* Tamanho da fonte pequeno */
 }
+

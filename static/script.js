@@ -15,26 +15,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function appendUserMessage(message) {
-        chatLog.innerHTML += `<div class="user-message">${message}</div>`;
+        chatLog.innerHTML += `<div class="user-message title-user">${message}</div>`;        
     }
 
     function getUserResponse(userMessage) {
         const json = JSON.stringify({ user_input: userMessage })
         console.log(json)
-        fetch('/ask', {
+        fetch('http://127.0.0.1:5000/ask', {
             method: 'POST',
             body: json,
             headers: {
                 'Content-Type': 'application/json'
             }
         })
-        .then(response => {
-            response.json()
-            console.log(response.json())
-        })
+        .then(response => response.json())
         .then(data => {
-            console.log(data)
-            console.log(data.response)
             const botResponse = data.response;
             appendBotMessage(botResponse);
         })
