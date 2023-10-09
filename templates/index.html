@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot FJS</title>
-    <link rel="stylesheet" href="static\style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="copyright">
+   
+    <main>
+        <h1>Chatbot FJS</h1>
+        <div class="chat-box">
+            <div class="chat-log" id="chat-log"></div>
+            <form id="user-input-form" action="/ask" method="post">
+                <input type="text" id="user-input" name="user_input" placeholder="Digite aqui sua dúvida...">
+                <button type="submit" id="button-send">Enviar</button>
+            </form>
+        </div>      
+    </main>
+
+    <footer>
+        <figure>
+            <img src="images/nho.jpg" alt="logo-acelera">
+        </figure> 
         <p>&copy; Todos os direitos reservados: Acelera FJS</p>
-    </div>
-    <h1>Chatbot FJS</h1>
-    <div class="chat-box">
-        <div class="chat-log" id="chat-log"></div>
-        <form id="user-input-form">
-            <input type="text" id="user-input" name="user_input" placeholder="Digite aqui sua dúvida...">
-            <button type="submit" id="button-send">Enviar</button>
-        </form>
-    </div>
-    <script src="static/script.js"></script>
+    </footer>
+    <script src="/static/script.js"></script>
 </body>
 </html>

@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => {
             console.error('Erro ao obter resposta do servidor:', error);
         });
-    }
+    } 
+
+    
 
     function appendBotMessage(message) {
         chatLog.innerHTML += `<div class="bot-message">${message}</div>`;

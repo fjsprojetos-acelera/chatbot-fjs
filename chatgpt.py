@@ -19,9 +19,7 @@ os.environ["OPENAI_API_KEY"] = constants.APIKEY
 PERSIST = False
 
 def chatBotRun(query):
-    if len(sys.argv) > 1:
-      query = sys.argv[1]
-
+    
     if PERSIST and os.path.exists("persist"):
       print("Reusing index...\n")
       vectorstore = Chroma(persist_directory="persist", embedding_function=OpenAIEmbeddings())
@@ -39,14 +37,5 @@ def chatBotRun(query):
       retriever=index.vectorstore.as_retriever(search_kwargs={"k": 1}),
     )
 
-    chat_history = []
-    while True:
-      if not query:
-        query = input("Prompt: ")
-
-      #Salva as últimas perguntas
-      result = chain({"question": query, "chat_history": chat_history})
-      print(result['answer'])
-
-      chat_history.append((query, result['answer']))
-      return result
+    result = chain({"question": query, "chat_history": []})
+    return result['answer']

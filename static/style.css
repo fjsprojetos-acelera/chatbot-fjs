@@ -4,7 +4,13 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #fff;
     text-align: center;
-    background-color: #941950;
+ /*    background-color: #941950; */
+ background: radial-gradient(circle, rgba(148,25,80,1) 9%, rgba(45,39,39,1) 100%);
+    flex-direction: column;;
+    width: 800px;
+    max-width: 750px;
+    margin: 0 auto;
+
 }
 
 #button-send {
@@ -12,9 +18,11 @@ body {
     padding: 10px 20px;
     margin-top: 10px;
     width: 40%;
+    min-width: 30%;
+    max-width: 65%;
     border: none;
     border-radius: 10px;
-    background-color: #941950; /* Cor de fundo */
+    background-color: #941950; /* Cor de fundo */ 
     color: #fff; /* Cor do texto */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
@@ -41,9 +49,10 @@ body {
 }
 
 .chat-log {
-    height: 430px;
+    height: 25rem;
+    min-height: 12rem;
     overflow-y: scroll;
-    padding: 10px;
+    padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #fff;
@@ -110,13 +119,28 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra mais forte quando em foco */
 }
 
-#copyright {
-    position: absolute; /* Define a posição absoluta */
-    top: 0; /* Alinha no topo da página */
-    color: #fff; /* Cor do texto */
-    text-align: center; /* Alinhar ao centro */
-    padding: 5px; /* Espaçamento interno */
-    width: 98%; /* Largura total */
-    font-size: 10px; /* Tamanho da fonte pequeno */
+
+footer {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+
+    display:flex;
+
 }
+
+p {
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
 
