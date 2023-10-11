@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="/static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@300&family=Roboto:wght@100;400;700&family=Syne:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
    
     <main>
-        <h1>Chatbot FJS</h1>
-        <div class="chat-box">
-            <div class="chat-log" id="chat-log"></div>
-            <form id="user-input-form" action="/ask" method="post">
-                <input type="text" id="user-input" name="user_input" placeholder="Digite aqui sua dúvida...">
-                <button type="submit" id="button-send">Enviar</button>
-            </form>
-        </div>      
+       
+        <div class="chatbot">
+            <h1>Chatbot FJS</h1>
+            <div class="chat-box">
+                <div class="chat-log" id="chat-log"></div>
+                <form id="user-input-form" action="/ask" method="post">
+                    <input type="text" id="user-input" name="user_input" placeholder="Digite aqui sua dúvida...">
+                    <button type="submit" id="button-send">Enviar</button>
+                </form>
+            </div> 
+       </div>      
     </main>
 
     <footer>

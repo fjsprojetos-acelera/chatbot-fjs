@@ -1,28 +1,50 @@
-/* Estilização básica do chatbot */
+:root {
+    --primary-color: #941950;
+}
+
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    text-decoration:none;
+    }
+
 body {
     font-size: 23px;
     font-family: 'Poppins', sans-serif;
     color: #fff;
     text-align: center;
- /*    background-color: #941950; */
+
  background: radial-gradient(circle, rgba(148,25,80,1) 9%, rgba(45,39,39,1) 100%);
     flex-direction: column;;
-    width: 800px;
-    max-width: 750px;
+    max-width: 100%;
+    min-height: 100%;
     margin: 0 auto;
+    height: 100vh;
 
+    display:block;
+
+    
+
+}
+
+main {
+    min-height: 100%;
+    min-width: 100%;
 }
 
 #button-send {
     font-family: 'Poppins', sans-serif;
     padding: 10px 20px;
-    margin-top: 10px;
-    width: 40%;
+    margin: 1rem 0;
+   
     min-width: 30%;
     max-width: 65%;
     border: none;
     border-radius: 10px;
-    background-color: #941950; /* Cor de fundo */ 
+    background-color: var(--primary-color); /* Cor de fundo */ 
     color: #fff; /* Cor do texto */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
@@ -44,12 +66,15 @@ body {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 1 1 5px rgba(0, 0, 0, 0.2);
-    max-width: 550px;
+    max-width: 70%;
+    min-width: 50rem;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .chat-log {
-    height: 22rem;
+    height: 30rem;
     min-height: 12rem;
     overflow-y: scroll;
     padding: 1rem;
@@ -120,27 +145,64 @@ body {
 }
 
 
-footer {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
 
-    display:flex;
-
-}
 
 p {
     text-align: center;
 }
 
+footer p {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 img {
-    width: 100px;
-    height: 100px;
+    width: 230px;
+    max-width: 300px;
+    height: auto;
 }
 
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 20px;
 	height: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ffff;
+    min-height: max-content;
+    padding: 1.2rem;
+    padding-bottom: 0rem;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+
+    margin-top: 5rem;
+
+}
+
+.chatbot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-width: 100%;
+  gap: 3rem;
+
+  padding: 8rem 0;
+
+}
+
+h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 5rem;
 }
 
 
