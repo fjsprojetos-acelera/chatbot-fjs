@@ -49,7 +49,7 @@ body {
 }
 
 .chat-log {
-    height: 25rem;
+    height: 22rem;
     min-height: 12rem;
     overflow-y: scroll;
     padding: 1rem;

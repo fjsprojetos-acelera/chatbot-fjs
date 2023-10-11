@@ -13,15 +13,11 @@ CORS(app)
 def index():
     return render_template('index.html')
 
-#json.dumps({'user_input' : request.form['user_input']})
-
 @app.route('/ask', methods=['POST'])
 def ask():
-    url = 'http://127.0.0.1:5000/'
-    form_data= {'input': 'user_input'}
     try:
         print("teste 1")
-        userInput = requests.post(url, data=form_data)
+        userInput = request.form['user_input']
         print(userInput)
         bot_response = chatBotRun(userInput)
         return jsonify({'response': bot_response})
@@ -31,5 +27,3 @@ def ask():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
